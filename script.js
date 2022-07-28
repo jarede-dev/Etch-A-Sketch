@@ -22,6 +22,5 @@ for(i; i <= 254; i++){
     const square = document.createElement("div");
     square.classList.add("square", "square-" + i );
     cont.appendChild(square);
-    console.log(square);
+    //console.log(square);
 }
-
