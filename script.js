@@ -10,15 +10,15 @@ let sqrClass = sqr.setAttribute("class", "square");
 let container = document.querySelector("#container");
 let square = document.querySelector(".square");
 
-// output to DOM
+// outputs to DOM
 cont.appendChild(sqr);
 document.body.appendChild(cont);
 
-// declare i
+// declares i
 let i = 0;
 
-// loop square class
-for(i; i <= 254; i++){
+// loops square class
+for(i; i <= 256 - 2; i++){
     const square = document.createElement("div");
     square.classList.add("square", "square-" + i );
     cont.appendChild(square);
