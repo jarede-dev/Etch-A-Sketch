@@ -24,3 +24,5 @@ for(i; i <= 256 - 2; i++){
     cont.appendChild(square);
     //console.log(square);
 }
+
+//console.log(cont);
