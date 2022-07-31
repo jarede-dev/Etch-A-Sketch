@@ -1,5 +1,5 @@
+//select elements
 let square = document.querySelector(".square");
-
 let container = document.querySelector("#container");
 let mainContainer = document.querySelector("#mainContainer");
 
