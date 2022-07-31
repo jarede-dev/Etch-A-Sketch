@@ -22,15 +22,20 @@
 }
   #container{
       display: grid;
-      grid-template-columns: repeat(16, 10px);
-      grid-template-rows: repeat(16, 10px);
+      grid-template-columns: repeat(100, 10px);
+      grid-template-rows: repeat(100, 10px);
   }
      
   .square{
      display: inline-block;
-      border: 2px black solid;
+      border: 2px green solid;
+      background-color: black;
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+      transition: 0s 180s;
   }
   
   .square:hover{
-      background-color: black;
+      transition: 0s;
+      visibility: hidden;
   }
