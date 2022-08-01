@@ -19,10 +19,11 @@ body{
     margin: 10px;
     color: antiquewhite;
 }
-#askNumber{
+
+.btn{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     height: 30px;
     width: 100px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #buttonContainer{
