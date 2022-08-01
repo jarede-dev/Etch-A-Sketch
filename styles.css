@@ -3,6 +3,10 @@
     --grid-rows: 1;
 }
 
+body{
+    background-color: cornflowerblue;
+}
+
 #mainContainer{
     display: flex;
     flex-direction: column;
@@ -13,6 +17,7 @@
 .text{
     font-family: monospace;
     margin: 10px;
+    color: antiquewhite;
 }
 #askNumber{
     height: 30px;
@@ -24,23 +29,25 @@
     display: flex;
     text-align: center;
     gap: 10px;
+    margin: 35px 0 10px 0;
 }
   #container{
       display: grid;
       grid-template-columns: repeat(16, 10px);
       grid-template-rows: repeat(16, 10px);
+      border: 4px black solid;
   }
      
   .square{
      display: inline-block;
-      border: 2px green solid;
+      border: 1px green solid;
       background-color: black;
-      -webkit-animation-play-state: paused;
       animation-play-state: paused;
       transition: 0s 180s;
   }
   
   .square:hover{
+      background-color: white;
+      animation-play-state: running;
       transition: 0s;
-      visibility: hidden;
   }
