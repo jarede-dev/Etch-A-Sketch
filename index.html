@@ -22,7 +22,7 @@
     <h3 class="text"> 1. Input the size of canvas that you want and click enter </h4>
     <h3 class="text"> 2. Hover over the canvas to start sketching </h4>
     <div id="buttonContainer">
-    <button id="askNumber"> <span>Enter </span></button> <input type="text"  id="input" placeholder="Enter Size (Maximum 100)">
+    <button id="askNumber"> <span>Enter </span></button> <input type="number" pattern="[0-9]{2}" min="0" max="100" value="0" id="input" placeholder="Maximum 100">
     </div>
     <div id="container">
       <div class="square"></div>
