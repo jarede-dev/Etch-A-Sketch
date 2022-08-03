@@ -18,12 +18,6 @@ document.body.appendChild(mainContainer);
 let i = 0;
 
 // loops square class
-for(i; i <= 256 - 2; i++){
-    const square = document.createElement("div");
-    square.classList.add("square", "square-" + i );
-    container.appendChild(square);
-    //console.log(square);
-}
 
 //button responsiveness
 document.getElementById("askNumber").addEventListener("click", getNumber, false);
@@ -37,7 +31,16 @@ function randomColor(){
 }
 
 function getNumber(){
-    console.log(input.value);
+    let getAmount = document.getElementById("input").value;
+    for(i; i <= getAmount * getAmount - 2; i++){
+        const square = document.createElement("div");
+        square.classList.add("square", "square-" + i );
+        container.appendChild(square);
+        document.getElementById("container").style.gridTemplateColumns = `repeat(${getAmount}, 10px)`;
+        document.getElementById("container").style.gridTemplateColumns = `repeat(${getAmount}, 10px)`;
+        //console.log(square);
+    }
+    console.log(getAmount);
 }
 
 document.getElementById("clear").addEventListener("click", clearCanvas, false);
