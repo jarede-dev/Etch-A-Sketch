@@ -17,19 +17,27 @@ document.body.appendChild(mainContainer);
 // declares i
 let i = 0;
 
+// loops square class
+for(i; i <= 1600 - 2; i++){
+    const square = document.createElement("div");
+    square.classList.add("square", "square-" + i );
+    container.appendChild(square);
+    //console.log(square);
+}
+
 //button responsiveness
 document.getElementById("askNumber").addEventListener("click", getNumber, false);
 
+function randomColor(){
+    let value = "0123456789ABCDEF";
+    var color = "#";
+    for(let i = 0; i < 6; i++){
+        color += value[Math.floor(Math.random() * 16)];
+    } return color;
+}
+
 function getNumber(){
-    let getAmount = document.getElementById("input").value;
-    for(i; i <= getAmount * getAmount - 2; i++){
-        const square = document.createElement("div");
-        square.classList.add("square", "square-" + i );
-        container.appendChild(square);
-    }
-    document.getElementById("container").style.gridTemplateColumns = `repeat(${getAmount}, 10px)`;
-        document.getElementById("container").style.gridTemplateColumns = `repeat(${getAmount}, 10px)`;
-    console.log(getAmount);
+    console.log(input.value);
 }
 
 document.getElementById("clear").addEventListener("click", clearCanvas, false);
