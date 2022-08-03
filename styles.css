@@ -26,6 +26,10 @@ body{
     width: 100px;
 }
 
+#input{
+    width: 70px;
+}
+
 #buttonContainer{
     display: flex;
     text-align: center;
@@ -34,8 +38,8 @@ body{
 }
   #container{
       display: grid;
-      grid-template-columns: repeat(16, 10px);
-      grid-template-rows: repeat(16, 10px);
+      /*grid-template-columns: repeat(16, 10px);
+      grid-template-rows: repeat(16, 10px);*/
       border: 4px black solid;
   }
      
