@@ -31,9 +31,14 @@ body{
     gap: 10px;
     margin: 35px 0 10px 0;
 }
-  .container{
+
+.container{
       display: grid;
       width: 600px;
       height: 600px;
       background-color: white;
+}
+
+.container:hover{
+    cursor: pointer;
 }
