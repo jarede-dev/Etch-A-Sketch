@@ -1,50 +1,50 @@
-//select elements
-let square = document.querySelector(".square");
-let container = document.querySelector("#container");
-let mainContainer = document.querySelector("#mainContainer");
-
-let btn = document.querySelector("#askNumber");
-let input = document.querySelector("#input");
-let clear = document.querySelector("#clear");
-
-//append and output to DOM
-container.appendChild(square);
-
-mainContainer.appendChild(container);
-
-document.body.appendChild(mainContainer);
-
-// declares i
-let i = 0;
-
-// loops square class
-
-//button responsiveness
-document.getElementById("askNumber").addEventListener("click", getNumber, false);
-
-function randomColor(){
-    let value = "0123456789ABCDEF";
-    var color = "#";
-    for(let i = 0; i < 6; i++){
-        color += value[Math.floor(Math.random() * 16)];
-    } return color;
-}
-
-function getNumber(){
-    let getAmount = document.getElementById("input").value;
-    for(i; i <= getAmount * getAmount - 2; i++){
-        const square = document.createElement("div");
-        square.classList.add("square", "square-" + i );
-        container.appendChild(square);
-        document.getElementById("container").style.gridTemplateColumns = `repeat(${getAmount}, 10px)`;
-        document.getElementById("container").style.gridTemplateColumns = `repeat(${getAmount}, 10px)`;
-        //console.log(square);
+// function that makes the grid
+function getGrid(size){
+    let container = document.querySelector(".container");
+    let squares = container.querySelectorAll("div");
+    squares.forEach((div) => div.remove());
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    
+    let grid = size * size;
+    for(let i = 0; i < grid; i++){
+    let square = document.createElement("div");
+    square.addEventListener("mouseover", getColor);
+    square.style.backgroundColor = "white";
+    container.insertAdjacentElement("beforeend", square);
+     }
+   }
+   
+   getGrid(16);
+   
+   // changes the size of the grid
+   function changeGridSize(input){
+    if(input > 0 && input <= 100){
+    console.log(getGrid(input));
+    } else{
+    alert("Enter size only from 1 to 100");
     }
-    console.log(getAmount);
-}
-
-document.getElementById("clear").addEventListener("click", clearCanvas, false);
-
-function clearCanvas(){
-    document.location.reload();
-}
+   }
+   
+   //random color
+   function getColor(){
+       let value = "0123456789ABCDEF";
+       var color = "#";
+       for(let i = 0; i < 6; i++){
+           color += value[Math.floor(Math.random() * 16)];
+       } this.style.backgroundColor = color;
+   }
+   
+   //buttons and input
+   //select elements
+   let btn = document.querySelector("#askNumber");
+   let input = document.querySelector("#input");
+   let clear = document.querySelector("#clear");
+   
+   function clearCanvas(){
+       document.location.reload();
+   }
+   
+   document.getElementById("clear").addEventListener("click", clearCanvas, false);
+   
+   

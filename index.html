@@ -10,26 +10,18 @@
 </head>
 <body>
 
-<!-- 
-    TO DO:
-    add h1 "Etch-A-Sketch" 
-    make input and button responsive
--->
-
 <div id="mainContainer">
     <h1 class="text"> Etch-A-Sketch </h1>
     <h2 class="text"> Instructions:</h2>
-    <h3 class="text"> 1. Input the size of canvas that you want and click enter </h4>
-    <h3 class="text"> 2. Hover over the canvas to start sketching </h4>
+    <h3 class="text"> 1. Input the size of canvas that you want and click enter </h3>
+    <h3 class="text"> 2. Hover over the canvas to start sketching </h3>
 
-    <div id="buttonContainer">
+   <div id="buttonContainer">
     <button id="askNumber" class="btn"> <span>Enter </span></button> 
-    <input type="number" pattern="[0-9]{2}" min="0" max="100" id="input" placeholder="Max: 100">
-    </div>
-
-    <div id="container">
-      <div class="square"></div>
-    </div>
+    <input type="number" pattern="[0-9]{2}" min="0" max="100" id="input" 
+    placeholder="Max: 100" onchange="changeGridSize(this.value)">
+   </div>
+    <div class="container"></div>
     <button id="clear" class="btn"> <span> Clear Canvas </span> </button>
 </div>
     
