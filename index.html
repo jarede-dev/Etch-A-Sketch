@@ -21,6 +21,10 @@
     <input type="number" pattern="[0-9]{2}" min="0" max="100" id="input" 
     placeholder="Max: 100" onchange="changeGridSize(this.value)">
    </div>
+   <div id="buttonColors">
+   <button id="black" class="btn" onclick="changeColor('black')"> <span> Black</span> </button>
+   <button id="rainbow" class="btn" onclick="changeColor('random')"> <span> Rainbow</span> </button>
+   </div>
     <div class="container"></div>
     <button id="clear" class="btn"> <span> Clear Canvas </span> </button>
 </div>
