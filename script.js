@@ -28,15 +28,36 @@ function getGrid(size){
   }
   
   //random color
+  let color = "black";
+
   function getColor(){
+    if(true){
+      if(color === "random"){
+        let value = "0123456789ABCDEF";
+    var random = "#";
+    for (let i = 0; i < 6; i++){
+      random += value[Math.floor(Math.random() * 16)];
+    }
+    this.style.backgroundColor = random;
+      } else{
+        this.style.backgroundColor = color;
+      }
+    }
+  }
+
+  function changeColor(select){
+    color = select;
+  }
+
+  function randomColor(){
     let value = "0123456789ABCDEF";
-    var color = "#";
+    var random = "#";
     for (let i = 0; i < 6; i++){
       color += value[Math.floor(Math.random() * 16)];
     }
-    this.style.backgroundColor = color;
+    this.style.backgroundColor = random;
   }
-  
+
   //buttons and input
   //select elements
   let btn = document.querySelector("#askNumber");
