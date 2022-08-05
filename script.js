@@ -49,15 +49,6 @@ function getGrid(size){
     color = select;
   }
 
-  function randomColor(){
-    let value = "0123456789ABCDEF";
-    var random = "#";
-    for (let i = 0; i < 6; i++){
-      color += value[Math.floor(Math.random() * 16)];
-    }
-    this.style.backgroundColor = random;
-  }
-
   //buttons and input
   //select elements
   let btn = document.querySelector("#askNumber");
