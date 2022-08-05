@@ -22,23 +22,39 @@ body{
 }
 
 #input{
-    width: 70px;
+    width: 90px;
 }
 
 #buttonContainer{
     display: flex;
-    text-align: center;
-    gap: 10px;
     margin: 35px 0 10px 0;
+    gap: 12px;
+   
 }
 
 .container{
       display: grid;
       width: 600px;
-      height: 600px;
+      height: 500px;
       background-color: white;
 }
 
 .container:hover{
     cursor: pointer;
+}
+
+#buttonColors{
+    display: flex;
+    gap: 10px;
+}
+
+#black{
+ background-color: black;
+ color: white;
+}
+
+#rainbow{
+ background: linear-gradient(red, yellow,blue, green, orange, violet, indigo);
+ color: wheat;
+ text-shadow: white 0px 0px 10px;
 }
