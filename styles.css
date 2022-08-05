@@ -19,6 +19,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 30px;
     width: 100px;
+    transition: all 200ms linear;
 }
 
 #input{
@@ -37,6 +38,11 @@ body{
       width: 600px;
       height: 500px;
       background-color: white;
+}
+
+.btn:focus{
+    border: 2.5px coral solid;
+    transition: 200ms;
 }
 
 .container:hover{
